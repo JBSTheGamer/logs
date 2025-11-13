@@ -1,4 +1,19 @@
+[20:49:29.336] [.NET TP Worker/ERROR] [tML]: Unhandled Exception
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Terraria.IO.WorldFile.SaveWorldTiles(BinaryWriter writer) in tModLoader\Terraria\IO\WorldFile.cs:line 1297
+   at Terraria.IO.WorldFile.SaveWorld_Version2(BinaryWriter writer) in tModLoader\Terraria\IO\WorldFile.cs:line 902
+   at Terraria.IO.WorldFile.InternalSaveWorld(Boolean useCloudSaving, Boolean resetTime) in tModLoader\Terraria\IO\WorldFile.cs:line 681
+   at Terraria.IO.WorldFile.<>c__DisplayClass58_0.<SaveWorld>b__0() in tModLoader\Terraria\IO\WorldFile.cs:line 648
+   at Terraria.Utilities.FileUtilities.ProtectedInvoke(Action action) in tModLoader\Terraria\Utilities\FileUtilities.cs:line 207
+   at DMD<DMD<>?53010980::Terraria.IO.WorldFile::SaveWorld>(Boolean useCloudSaving, Boolean resetTime)
+   at SyncProxy<System.Void Terraria.IO.WorldFile:SaveWorld(System.Boolean, System.Boolean)>(Boolean , Boolean )
+   at Terraria.IO.WorldFile.SaveWorld() in tModLoader\Terraria\IO\WorldFile.cs:line 623
+   at Terraria.WorldGen.saveAndPlayCallBack(Object threadContext) in tModLoader\Terraria\WorldGen.cs:line 2821
+   at System.Threading.QueueUserWorkItemCallback.Execute()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
 
+   MINIDUMP/DMP   
 ************* Preparing the environment for Debugger Extensions Gallery repositories **************
    ExtensionRepository : Implicit
    UseExperimentalFeatureForNugetShare : true
@@ -16,7 +31,7 @@
 
 ************* Waiting for Debugger Extensions Gallery to Initialize **************
 
->>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.015 seconds
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.032 seconds
    ----> Repository : UserExtensions, Enabled: true, Packages count: 0
    ----> Repository : LocalInstalled, Enabled: true, Packages count: 46
 
@@ -64,6 +79,10 @@ Loading extension C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2510.7001.0_x6
 Loading extension C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2510.7001.0_x64__8wekyb3d8bbwe\amd64\winext\sos\extensions\Microsoft.Diagnostics.DebuggerCommands.dll
 AssociateClient trying managed CLRMA
 AssociateClient trying DAC CLRMA
+*** WARNING: Unable to verify timestamp for gameoverlayrenderer64.dll
+*** WARNING: Unable to verify timestamp for steamclient64.dll
+*** WARNING: Unable to verify timestamp for vstdlib_s64.dll
+*** WARNING: Unable to verify timestamp for tier0_s64.dll
 *******************************************************************************
 *                                                                             *
 *                        Exception Analysis                                   *
@@ -2827,28 +2846,28 @@ Failed to request MethodData, not in JIT code range
 KEY_VALUES_STRING: 1
 
     Key  : Analysis.CPU.mSec
-    Value: 20031
+    Value: 19109
 
     Key  : Analysis.Elapsed.mSec
-    Value: 169009
+    Value: 68061
 
     Key  : Analysis.IO.Other.Mb
-    Value: 7
+    Value: 1
 
     Key  : Analysis.IO.Read.Mb
-    Value: 4
+    Value: 1
 
     Key  : Analysis.IO.Write.Mb
-    Value: 273
+    Value: 3
 
     Key  : Analysis.Init.CPU.mSec
-    Value: 2875
+    Value: 718
 
     Key  : Analysis.Init.Elapsed.mSec
-    Value: 82387
+    Value: 46138
 
     Key  : Analysis.Memory.CommitPeak.Mb
-    Value: 544
+    Value: 501
 
     Key  : Analysis.Version.DbgEng
     Value: 10.0.29457.1000
